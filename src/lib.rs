@@ -1,6 +1,6 @@
 extern crate ordered_float;
 
-use std::collections::{BTreeMap, BTreeSet};
+use std::collections::{LinkedList, BTreeMap, BTreeSet};
 
 use ordered_float::OrderedFloat;
 
@@ -16,7 +16,7 @@ pub enum Value {
     Keyword(String),
     Integer(i64),
     Float(OrderedFloat<f64>),
-    List(Vec<Value>),
+    List(LinkedList<Value>),
     Vector(Vec<Value>),
     Map(BTreeMap<Value, Value>),
     Set(BTreeSet<Value>),
